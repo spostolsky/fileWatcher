@@ -1,0 +1,65 @@
+{
+	"name": "filewatcher",
+	"displayName": "file watcher",
+	"description": "watch create or delete files",
+	"publisher": "spostolsky",
+	"repository": "https://vscodeExtension@dev.azure.com/vscodeExtension/fileWatcher_2_pub/_git/fileWatcher_2_pub",
+	"version": "0.0.3",
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"keybindings": [
+			{
+				"command": "workbench.action.tasks.runTask",
+				"key": "ctrl+i",
+				"args": "init-pages-file"
+			},
+			{
+				"command": "workbench.action.tasks.runTask",
+				"key": "ctrl+o",
+				"args": "file-enum"
+			}
+		],
+		"configuration":{
+			"title": "fileWatcher configuration",
+			"properties": {
+				"filewtcherconfig":{
+					"type": "object",
+					"properties": {
+						"extname": {
+							"type": "string",
+							"description": "file extension"
+						},
+						"script": {
+							"type": "string",
+							"description": "script to execute on change file name."
+						}
+					}
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"tslint": "^5.12.1",
+		"tslint-eslint-rules": "^5.4.0",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	}
+}
