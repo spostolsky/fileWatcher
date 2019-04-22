@@ -19,8 +19,8 @@ function startWatch(): void {
 	}
 
 	function runScript(filePath: string): void {
-		const cmd: string = `cd /d ${workspacePath} & node "${SCRIPT}" "${filePath}"`;
-		if (path.extname(filePath) === EXT) {
+		const cmd: string = `cd /d "${workspacePath}" & node "${script}" "${filePath}"`;
+		if (path.extname(filePath) === ext) {
 			consoleChannel.appendLine(`*** run command: ${cmd}`);
 			exec(cmd);
 		}
@@ -33,8 +33,8 @@ function startWatch(): void {
 
 	const consoleChannel: vscode.OutputChannel = vscode.window.createOutputChannel("File Watcher");
 	const config: vscode.WorkspaceConfiguration = vscode.workspace.getConfiguration("filewtcherconfig");
-	const EXT: string = config.extname;
-	const SCRIPT: string = config.script;
+	const ext: string = config.extname;
+	const script: string = config.script;
 	const workspaceFolders: vscode.WorkspaceFolder[] | undefined = vscode.workspace.workspaceFolders;
 	let workspacePath: string | null = null;
 	if (workspaceFolders != null) {
