@@ -11,7 +11,7 @@
 	"version": "0.0.1",
 	"repository": {
 		"type": "git",
-		"url": "https://vscodeExtension@dev.azure.com/vscodeExtension/fileWatcher_2_pub/_git/fileWatcher_2_pub.git"
+		"url": "https://github.com/spostolsky/fileWatcher.git"
 	},
 	"engines": {
 		"vscode": "^1.32.0"
