@@ -5,10 +5,10 @@
 	"icon": "icons/icon.png",
 	"galleryBanner": {
 		"color": "#C80000",
-		"theme": "light"
+		"theme": "dark"
 	},
 	"publisher": "AppulateInc",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/spostolsky/fileWatcher.git"
@@ -19,7 +19,7 @@
 	"categories": [
 		"Other"
 	],
-	"keywords": ["run script", "on save", "on change", "save file", "change file"],
+	"keywords": ["run script", "on save", "on change", "save file", "change file name"],
 	"activationEvents": [
 		"*"
 	],
