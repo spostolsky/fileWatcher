@@ -1,4 +1,4 @@
-# filewatcher README
+# File Watcher README
 
 This extension allows configuring commands that get run whenever a file is saved or folder is changed in vscode.
 

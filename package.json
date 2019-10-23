@@ -1,7 +1,7 @@
 {
 	"name": "filewatcher",
-	"displayName": "file watcher",
-	"description": "watch events onSaveDocument, onFolderChange",
+	"displayName": "File Watcher",
+	"description": "File Watcher for Visual Studio Code: watch events onSaveDocument, onFolderChange",
 	"icon": "icons/icon.png",
 	"galleryBanner": {
 		"color": "#C80000",
@@ -19,7 +19,7 @@
 	"categories": [
 		"Other"
 	],
-	"keywords": ["run script", "on save", "on change", "save file", "change file name"],
+	"keywords": ["run script", "folder watch", "case insensitive", "on change", "on save"],
 	"activationEvents": [
 		"*"
 	],
