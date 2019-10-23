@@ -1,16 +1,25 @@
 {
 	"name": "filewatcher",
 	"displayName": "file watcher",
-	"description": "watch create or delete files",
-	"publisher": "spostolsky",
-	"repository": "https://vscodeExtension@dev.azure.com/vscodeExtension/fileWatcher_2_pub/_git/fileWatcher_2_pub",
-	"version": "0.0.3",
+	"description": "watch events onSaveDocument, onFolderChange",
+	"icon": "icons/icon.png",
+	"galleryBanner": {
+		"color": "#C80000",
+		"theme": "light"
+	},
+	"publisher": "AppulateInc",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://vscodeExtension@dev.azure.com/vscodeExtension/fileWatcher_2_pub/_git/fileWatcher_2_pub.git"
+	},
 	"engines": {
 		"vscode": "^1.32.0"
 	},
 	"categories": [
 		"Other"
 	],
+	"keywords": ["run script", "on save", "on change", "save file", "change file"],
 	"activationEvents": [
 		"*"
 	],
@@ -19,28 +28,68 @@
 		"keybindings": [
 			{
 				"command": "workbench.action.tasks.runTask",
-				"key": "ctrl+i",
-				"args": "init-pages-file"
-			},
-			{
-				"command": "workbench.action.tasks.runTask",
 				"key": "ctrl+o",
 				"args": "file-enum"
 			}
 		],
-		"configuration":{
-			"title": "fileWatcher configuration",
+		"commands": [
+			{
+				"command": "extension.enableFileWatcher",
+				"title": "File Watcher: Enable"
+			},
+			{
+				"command": "extension.disableFileWatcher",
+				"title": "File Watcher: Disable"
+			}
+		],
+		"configuration": {
+			"title": "File Watcher command configuration.",
+			"type": "object",
 			"properties": {
-				"filewtcherconfig":{
+				"appulateinc.filewatcher": {
 					"type": "object",
 					"properties": {
-						"extname": {
-							"type": "string",
-							"description": "file extension"
+						"autoClearConsole": {
+							"type": "boolean",
+							"description": "Automatically clear the console on each save before running commands.",
+							"default": false
 						},
-						"script": {
+						"shell": {
 							"type": "string",
-							"description": "script to execute on change file name."
+							"description": "Shell to execute the command with (gets passed to child_process.exec as an options arg. e.g. child_process(cmd, { shell })."
+						},
+						"commands": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"match": {
+										"type": "string",
+										"description": "Regex for matching files to run commands on \n\nNOTE: This is a regex and not a file path spce, so backslashes have to be escaped. They also have to be escaped in json strings, so you may have to double escape them in certain cases such as targetting contents of folders.\n\ne.g.\n\"match\": \"some\\\\\\\\directory\\\\\\\\.*\"",
+										"default": ".*"
+									},
+									"notMatch": {
+										"type": "string",
+										"description": "Regex for matching files *not* to run commands on.",
+										"default": ".*"
+									},
+									"cmd": {
+										"type": "string",
+										"description": "Command to execute on save.",
+										"default": "echo ${file}"
+									},
+									"isAsync": {
+										"type": "boolean",
+										"description": "Run command asynchronously.",
+										"default": false
+									},
+									"event": {
+										"type": "string",
+										"description": "events onFileChange, onFolderChange",
+										"default": "onSaveDocument"
+									}
+								}
+							}
 						}
 					}
 				}
@@ -51,15 +100,13 @@
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+		"postinstall": "node ./node_modules/vscode/bin/install"
 	},
 	"devDependencies": {
-		"typescript": "^3.3.1",
 		"vscode": "^1.1.28",
-		"tslint": "^5.12.1",
+		"tslint": "^5.16.0",
 		"tslint-eslint-rules": "^5.4.0",
-		"@types/node": "^10.12.21",
-		"@types/mocha": "^2.2.42"
+		"typescript": "^3.4.3",
+		"@types/node": "^10.12.21"
 	}
 }
