@@ -28,14 +28,14 @@ Commands support placeholders similar to tasks.json.
 * ${fileExtname}: extension (including .) of saved file
 * ${fileBasenameNoExt}: saved file's basename without extension
 
-Sample
+Samples
 =========
 
-first Sample
+File content change tracking example.
 
-![ screencast ](https://raw.githubusercontent.com/spostolsky/fileWatcher/master/icons/change0.gif)
+![ screencast ](https://raw.githubusercontent.com/spostolsky/fileWatcher/master/icons/fileContentChanged.gif)
 
-second Sample
+Folder content change tracking example
 
-![ screencast ](https://raw.githubusercontent.com/spostolsky/fileWatcher/master/icons/change.gif)
+![ screencast ](https://raw.githubusercontent.com/spostolsky/fileWatcher/master/icons/folderContentChanged.gif)
 
