@@ -18,7 +18,7 @@ Add "filewatcher" configuration to user or workspace settings.
   * "cmd" - command to run. Can include parameters that will be replaced at runtime (see Placeholder Tokens section below).
   * "isAsync" (optional) - defaults to false. If true, next command will be run before this one finishes.
 
-## Placeholder Tokens
+## Placeholder Tokens 111111
 Commands support placeholders similar to tasks.json.
 
 * ${workspaceRoot}: workspace root folder
