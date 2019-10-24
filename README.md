@@ -39,3 +39,7 @@ Folder content change tracking example
 
 ![ screencast ](https://raw.githubusercontent.com/spostolsky/fileWatcher/master/icons/folderContentChanged.gif)
 
+
+
+![ screencast ](https://raw.githubusercontent.com/spostolsky/fileWatcher/master/icons/folderChange.gif)
+
