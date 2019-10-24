@@ -19,7 +19,7 @@
 	"categories": [
 		"Other"
 	],
-	"keywords": ["run script", "folder watch", "case insensitive", "on change", "on save", "Sample"],
+	"keywords": ["run script", "folder watch", "case insensitive", "on change", "on save"],
 	"activationEvents": [
 		"*"
 	],
