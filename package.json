@@ -5,7 +5,7 @@
 	"icon": "icons/icon.png",
 	"galleryBanner": {
 		"color": "#C80000",
-		"theme": "dark"
+		"theme": "light"
 	},
 	"publisher": "AppulateInc",
 	"version": "0.0.2",
@@ -25,13 +25,6 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"keybindings": [
-			{
-				"command": "workbench.action.tasks.runTask",
-				"key": "ctrl+o",
-				"args": "file-enum"
-			}
-		],
 		"commands": [
 			{
 				"command": "extension.enableFileWatcher",
