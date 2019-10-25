@@ -2,9 +2,9 @@
 	"name": "filewatcher",
 	"displayName": "File Watcher",
 	"description": "File Watcher for Visual Studio Code: watch events onSaveDocument, onFolderChange",
-	"icon": "icons/image.png",
+	"icon": "icons/File_watcher_256х256.png",
 	"galleryBanner": {
-		"color": "#e4f2ff",
+		"color": "#E4F2FF",
 		"theme": "light"
 	},
 	"publisher": "AppulateInc",
