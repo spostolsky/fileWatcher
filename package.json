@@ -2,13 +2,13 @@
 	"name": "filewatcher",
 	"displayName": "File Watcher",
 	"description": "File Watcher for Visual Studio Code: watch events onSaveDocument, onFolderChange",
-	"icon": "icons/icon.png",
+	"icon": "icons/image.png",
 	"galleryBanner": {
-		"color": "#C80000",
+		"color": "#e4f2ff",
 		"theme": "light"
 	},
 	"publisher": "AppulateInc",
-	"version": "0.0.2",
+	"version": "1.0.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/spostolsky/fileWatcher.git"
