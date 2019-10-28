@@ -6,6 +6,7 @@ This extension allows configuring commands that get run whenever a file is saved
 * Following two events: onSaveDocument and onFolderChange:
     * **onSaveDocument** - allows to track changes to the contents of an existing file
     * **onFolderChange** - allows to track the deletion, addition and modification of files
+* **case insensitive** workspace root folder
 * Configure multiple commands that run when the event happened
 * Regex pattern matching for files that trigger commands running
 * Sync and async support
