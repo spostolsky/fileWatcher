@@ -1,9 +1,11 @@
-# File Watcher
+# File & Folder Watcher
 
 This extension allows configuring commands that get run whenever a file is saved or folder is changed in vscode.
 
 ## Features
-* following two events: onSaveDocument and onFolderChange
+* Following two events: onSaveDocument and onFolderChange:
+    * **onSaveDocument** - allows to track changes to the contents of an existing file
+    * **onFolderChange** - allows to track the deletion, addition and modification of files
 * Configure multiple commands that run when the event happened
 * Regex pattern matching for files that trigger commands running
 * Sync and async support
@@ -21,7 +23,7 @@ Add "filewatcher" configuration to user or workspace settings.
 ## Placeholder Tokens
 Commands support placeholders similar to tasks.json.
 
-* ${workspaceRoot}: workspace root folder
+* ${workspaceRoot}: **case insensitive** workspace root folder
 * ${file}: path of saved file
 * ${fileBasename}: saved file's basename
 * ${fileDirname}: directory name of saved file
@@ -31,7 +33,7 @@ Commands support placeholders similar to tasks.json.
 Samples
 =========
 
-File content change tracking example.
+**File content** change tracking example.
     Configuration in \.vscode\settings.json
 
     "appulateinc.filewatcher": {
@@ -47,7 +49,7 @@ File content change tracking example.
 
 ![ screencast ](https://raw.githubusercontent.com/spostolsky/fileWatcher/master/icons/fileChange.gif)
 
-Folder content change tracking example.
+**Folder content** change tracking example.
     Configuration in \.vscode\settings.json
 
     "appulateinc.filewatcher": {
