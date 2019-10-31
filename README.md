@@ -1,6 +1,6 @@
 # File & Folder Watcher
 
-This extension allows configuring commands that get run whenever a file is saved or folder is changed in vscode.
+Configure commands that are run whenever a file is saved or folder is changed in vscode with File Watcher.
 
 ## Features
 * Following two events: onSaveDocument and onFolderChange:
