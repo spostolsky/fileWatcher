@@ -1,7 +1,7 @@
 {
 	"name": "filewatcher",
 	"displayName": "File Watcher",
-	"description": "File Watcher for Visual Studio Code: watch events onSaveDocument, onFolderChange",
+	"description": "Run matched commands (or cmd scripts), and watch file and folder changes.",
 	"icon": "icons/lightning.png",
 	"galleryBanner": {
 		"color": "#E4F2FF",

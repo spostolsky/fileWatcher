@@ -1,8 +1,5 @@
 # File & Folder Watcher
 
-Extension for Visual Studio Code
-Extension for Visual Studio Code
-
 This extension allows configuring commands that get run whenever a file is saved or folder is changed in vscode.
 
 ## Features
