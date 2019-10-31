@@ -1,7 +1,7 @@
 {
 	"name": "filewatcher",
 	"displayName": "File Watcher",
-	"description": "Run matched commands (or cmd scripts), and watch file and folder changes.",
+	"description": "Watch file or folder changes, and run matched command scripts.",
 	"icon": "icons/lightning.png",
 	"galleryBanner": {
 		"color": "#E4F2FF",
